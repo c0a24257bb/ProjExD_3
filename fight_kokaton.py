@@ -109,6 +109,32 @@ class  Beam:
             self.rct.move_ip(self.vx, self.vy)
             screen.blit(self.img, self.rct)    
 
+<<<<<<< Updated upstream
+=======
+class Score:
+    def __init__(self):
+        self.color = [0, 0, 255]
+        self.score = 0 
+        self.fonto = pg.font.SysFont("hgp創英角ﾎﾟｯﾌﾟ体", 30)
+        self.img = self.fonto.render("スコア：" + str(self.score), 0, self.color)
+        self.rct = self.img.get_rect()
+        self.center = [100, HEIGHT - 50]
+
+    def update(self, screen: pg.surface):
+        self.img = self.fonto.render("スコア：" + str(self.score), 0, self.color)
+        screen.blit(self.img, self.center)
+    
+class explosion:
+    def __init__(self):
+        self.imgs = []
+        img1 = pg.image.load(f"fig/explosion.gif")
+        img2 = pg.transform.flip(img1, True, False)
+        img3 = pg.transform.flip(img1, False, True)
+        self.imgs.append(img1, img2, img3)
+        
+
+
+>>>>>>> Stashed changes
 
 class Bomb:
     """
